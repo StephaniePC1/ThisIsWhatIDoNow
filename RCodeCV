@@ -1,2 +1,11 @@
-name i want <- read.csv(file.choose(), header= TRUE)
-dim(name)
+name i want for df <- read.csv(file.choose(), header= TRUE)
+dim(df)
+names(df)
+Specific colomun: df$name
+max(df$name)
+which.max(df$name)
+df[row,column] :can be just a culumn or just a row.
+plot (x axis, y axis, type= "l")
+pie(df)
+barploat(df)
+boxplot(df)
