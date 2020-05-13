@@ -1,2 +1,0 @@
-name i want <- read.csv(file.choose(), header= TRUE)
-dim(name)
