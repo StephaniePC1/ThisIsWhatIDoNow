@@ -1,3 +1,4 @@
+BASICS
 name i want for df <- read.csv(file.choose(), header= TRUE)
 dim(df)
 names(df)
@@ -6,6 +7,9 @@ max(df$name)
 which.max(df$name)
 df[row,column] :can be just a culumn or just a row.
 plot (x axis, y axis, type= "l")
+plot (x=variable, y=variable): scatterplot
 pie(df)
 barploat(df)
 boxplot(df)
+
+
