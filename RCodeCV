@@ -1,4 +1,6 @@
 BASICS
+<- rename
+cdc[1:10,6]
 name i want for df <- read.csv(file.choose(), header= TRUE)
 dim(df)
 names(df)
@@ -11,5 +13,17 @@ plot (x=variable, y=variable): scatterplot
 pie(df)
 barploat(df)
 boxplot(df)
-
-
+mean(cdc$weight) 
+var(cdc$weight)
+median(cdc$weight)
+Categorical
+table(cdc$smoke100) - counts the number of times each kind of response was given
+barplot(table(cdc$smoke100))
+mosaicplot(table(cdc$gender,cdc$smoke100))
+mdata <- subset(cdc, cdc$gender == "m")
+m_and_over30 <- subset(cdc, gender == "m" & age > 30)-and
+m_or_over30 <- subset(cdc, gender == "m" | age > 30)-or
+Quantitative
+boxplot(cdc$height ~ cdc$gender)- The ~ character can be read versus or as a function of. So we’re asking R to give us a box plots of heights where the groups are defined by gender.
+hist(bmi)
+hist(bmi, breaks = 50)
