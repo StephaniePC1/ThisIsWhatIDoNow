@@ -12,7 +12,7 @@ plot (x axis, y axis, type= "l")
 plot (x=variable, y=variable): scatterplot
 pie(df)
 barploat(df)
-boxplot(df)
+boxplot(df) - good for discrete and categorical
 mean(cdc$weight) 
 var(cdc$weight)
 median(cdc$weight)
@@ -25,5 +25,5 @@ m_and_over30 <- subset(cdc, gender == "m" & age > 30)-and
 m_or_over30 <- subset(cdc, gender == "m" | age > 30)-or
 Quantitative
 boxplot(cdc$height ~ cdc$gender)- The ~ character can be read versus or as a function of. So we’re asking R to give us a box plots of heights where the groups are defined by gender.
-hist(bmi)
+hist(bmi) -histogram is good for continuous variable
 hist(bmi, breaks = 50)
