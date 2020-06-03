@@ -23,6 +23,7 @@ mosaicplot(table(cdc$gender,cdc$smoke100))
 mdata <- subset(cdc, cdc$gender == "m")
 m_and_over30 <- subset(cdc, gender == "m" & age > 30)-and
 m_or_over30 <- subset(cdc, gender == "m" | age > 30)-or
+m_or_over30 <- subset(cdc, gender == 1) : that is if it is binary options
 Quantitative
 boxplot(cdc$height ~ cdc$gender)- The ~ character can be read versus or as a function of. So we’re asking R to give us a box plots of heights where the groups are defined by gender.
 hist(bmi) -histogram is good for continuous variable
