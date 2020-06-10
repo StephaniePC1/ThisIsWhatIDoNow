@@ -40,3 +40,8 @@ Theorhetical:
  qqnorm(sim_biceps)
  qqline(sim_biceps)
 quantile(bm$BICEPS, probs=.75)---percentiles
+> getmode <- function(v) {
++     uniqv <- unique(v)
++     uniqv[which.max(tabulate(match(v, uniqv)))]
++ }
+v <- c(ar$age) ...then... result <- getmode(v) ...then... print(result)
