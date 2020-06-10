@@ -28,3 +28,15 @@ Quantitative
 boxplot(cdc$height ~ cdc$gender)- The ~ character can be read versus or as a function of. So we’re asking R to give us a box plots of heights where the groups are defined by gender.
 hist(bmi) -histogram is good for continuous variable
 hist(bmi, breaks = 50)
+Normal Distribution tests
+Theorhetical: 
+ pnorm(q=80, mean= mean(anor$Prewt), sd=sd(anor$Prewt))
+ 1-pnorm(q=80, mean= mean(anor$Prewt), sd=sd(anor$Prewt))
+ Empirical:
+ dim(variable)/# of observations
+ simulated data: sim_prewt<-rnorm (n = length(anor$Prewt), mean = mean(anor$Prewt), sd = sd(anor$Prewt))
+ qqnorm(bm$BICEPS)
+ qqline(bm$BICEPS)
+ qqnorm(sim_biceps)
+ qqline(sim_biceps)
+quantile(bm$BICEPS, probs=.75)---percentiles
