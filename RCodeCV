@@ -45,3 +45,5 @@ quantile(bm$BICEPS, probs=.75)---percentiles
 +     uniqv[which.max(tabulate(match(v, uniqv)))]
 + }
 v <- c(ar$age) ...then... result <- getmode(v) ...then... print(result)
+Density: hist(fdims$hgt, probability = TRUE)
+lines(x = x, y = y, col = "blue")
