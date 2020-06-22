@@ -12,10 +12,13 @@ plot (x axis, y axis, type= "l")
 plot (x=variable, y=variable): scatterplot
 pie(df)
 barploat(df)
+to change te number of graphs that are displayed:
+par(mfrow = c(3, 1)) this will be 3 rows one column
 boxplot(df) - good for discrete and categorical
 mean(cdc$weight) 
 var(cdc$weight)
 median(cdc$weight)
+
 Categorical
 table(cdc$smoke100) - counts the number of times each kind of response was given
 barplot(table(cdc$smoke100))
@@ -24,6 +27,7 @@ mdata <- subset(cdc, cdc$gender == "m")
 m_and_over30 <- subset(cdc, gender == "m" & age > 30)-and
 m_or_over30 <- subset(cdc, gender == "m" | age > 30)-or
 m_or_over30 <- subset(cdc, gender == 1) : that is if it is binary options
+
 Quantitative
 boxplot(cdc$height ~ cdc$gender)- The ~ character can be read versus or as a function of. So we’re asking R to give us a box plots of heights where the groups are defined by gender.
 hist(bmi) -histogram is good for continuous variable
@@ -47,3 +51,13 @@ quantile(bm$BICEPS, probs=.75)---percentiles
 v <- c(ar$age) ...then... result <- getmode(v) ...then... print(result)
 Density: hist(fdims$hgt, probability = TRUE)
 lines(x = x, y = y, col = "blue")
+Population Distribution and Sampling 
+to create a sample of a particular sample size: samp1 <- sample(area, 50)
+to create a series of random samples that have a particular sample size--this is known as looping:
+sample_means50 <- rep(NA, 5000)
+
+for(i in 1:5000){
+   samp <- sample(area, 50)
+   sample_means50[i] <- mean(samp)
+   }
+   
