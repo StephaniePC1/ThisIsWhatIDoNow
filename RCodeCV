@@ -85,11 +85,11 @@ load("ames.RData")
 for inference you must dowload this data set: download.file("http://www.openintro.org/stat/data/nc.RData", destfile = "nc.RData")
 load("nc.RData")
 comparisons: by(nc$weight, nc$habit, mean) or by(nc$weight, nc$habit, length)
-inference(y = nc$weight, x = nc$habit, est = "mean", type = "ci", null = 0, 
-+           alternative = "twosided", method = "theoretical") ----- twosided can also be greater or less
-to change ci level: inference(y = nc$weeks, est = "mean", type = "ci", null = 0, 
-+           alternative = "twosided", method = "theoretical", conflevel = 90)
+inference(y = nc$weight, x = nc$habit, est = "mean", type = "ci", null = 0, alternative = "twosided", method = "theoretical") ----- twosided can also be greater or less
+to change ci level: inference(y = nc$weeks, est = "mean", type = "ci", null = 0, alternative = "twosided", method = "theoretical", conflevel = 90)
 for ci if i want a specfic order add this: , order = c("smoker","nonsmoker")
-inference(y = nc$gained, x = nc$lowbirthweight, est = "mean", type = "ht", null = 0, 
-+           alternative = "twosided", method = "theoretical")
+inference(y = nc$gained, x = nc$lowbirthweight, est = "mean", type = "ht", null = 0, alternative = "twosided", method = "theoretical")
+Categorical inference
+inference(us12$response, est = "proportion", type = "ci", method = "theoretical", success = "atheist")
+inference(y = ces$abortion, x = ces$gender, est = "proportion", type = "ht", null = 0, alternative = "twosided", method = "theoretical", success = "Yes")
 
