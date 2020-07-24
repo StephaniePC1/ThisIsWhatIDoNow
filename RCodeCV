@@ -39,6 +39,8 @@ Theorhetical:
  Empirical:
  dim(variable)/# of observations
  simulated data: sim_prewt<-rnorm (n = length(anor$Prewt), mean = mean(anor$Prewt), sd = sd(anor$Prewt))
+ download.file("http://www.openintro.org/stat/data/bdims.RData", destfile = "bdims.RData")
+load("bdims.RData") to get : qqnormsim(df$variable)
  qqnorm(bm$BICEPS)
  qqline(bm$BICEPS)
  qqnorm(sim_biceps)
