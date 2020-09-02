@@ -44,7 +44,7 @@ load("bdims.RData") to get : qqnormsim(df$variable)
  qqnorm(bm$BICEPS)
  qqline(bm$BICEPS)
  qqnorm(sim_biceps)
- qqline(sim_biceps)
+ qqline(sim_biceps)<-------qqlines are important for checking the normality of a regression fit and the normality of residuals
 quantile(bm$BICEPS, probs=.75)---percentiles
 > getmode <- function(v) {
 +     uniqv <- unique(v)
@@ -94,4 +94,7 @@ inference(y = nc$gained, x = nc$lowbirthweight, est = "mean", type = "ht", null 
 Categorical inference
 inference(us12$response, est = "proportion", type = "ci", method = "theoretical", success = "atheist")
 inference(y = ces$abortion, x = ces$gender, est = "proportion", type = "ht", null = 0, alternative = "twosided", method = "theoretical", success = "Yes")
+t.test()---#Performs a t-test on 1 or more numerical values
+prop.test()-----#Performs a z-test on 1 or 2 proportions
+chisq.test()----#Performs a test of either goodness of fit, or association
 
