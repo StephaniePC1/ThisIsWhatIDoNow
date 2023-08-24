@@ -1,0 +1,10 @@
+ c:\users\f718089\ds\tools\python3.8\latest\python.exe -m pip install --upgrade pip
+import pandas as pd #available by default with the standard awmpythontraining installation
+import streamlit as st #pip install streamlit
+import plotly.express as px #pip install plotly
+
+pip install streamlit
+pip install openpyxl
+H: 
+cd #folder -- repeat if necessary
+$ streamlit run market_summaries_dashboard3.py
