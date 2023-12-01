@@ -143,3 +143,17 @@ Consideration:
 If the logic involves only a single expression or operation applied to each element, and you are building a new list, a list comprehension is often a cleaner and more Pythonic choice.
 
 If the logic is more complex, or if you need to perform multiple operations or include conditional statements within the loop, a traditional for loop with an explicit code block may be more suitable.
+
+def divide_numbers(a, b):
+    assert b != 0, "Denominator must not be zero"
+    result = a / b
+    print("Result:", result)
+
+# Example usage:
+numerator = 10
+denominator = 0
+
+try:
+    divide_numbers(numerator, denominator)
+except AssertionError as e:
+    print(f"Assertion Error: {e}")
