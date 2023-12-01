@@ -157,3 +157,5 @@ try:
     divide_numbers(numerator, denominator)
 except AssertionError as e:
     print(f"Assertion Error: {e}")
+
+hoose between assert and try-except based on your use case and the nature of the checks you need to perform. If the conditions are critical for the correct operation of your program and should always be true, assert might be suitable. If the conditions might fail due to external factors or user input, try-except provides a more flexible error-handling mechanism
