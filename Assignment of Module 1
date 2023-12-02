@@ -87,3 +87,20 @@ for key, value in pairwise_similarities.items():
 corpus = [["I", "did", "not", "like", "the", "services"], ["The", "service", "was", "ok"], ["I", "was", "ignored", "when", "I", "asked", "for", "services"]]
 tags = ["a", "b", "c"]
 dct_keys = {"a": 1, "b": "2", "c": 3}
+
+
+check: 
+
+def print_intersection(tag1, tag2, review1, review2):
+    intersection = set(review1) & set(review2)
+    print(f"Intersection of {tag1} and {tag2}: {intersection}")
+
+# Create permutations of tags
+tag_permutations = permutations(tags, 2)
+
+# Iterate over tag permutations
+for tag1, tag2 in tag_permutations:
+    # Find reviews corresponding to the tags using zip
+    for review1, review2 in zip(corpus[tags.index(tag1)], corpus[tags.index(tag2)]):
+        # Print intersection for each pair
+        print_intersection(tag1, tag2, review1, review2)
