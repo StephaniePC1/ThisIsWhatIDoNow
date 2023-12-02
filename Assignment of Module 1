@@ -1,0 +1,84 @@
+Assignment 1
+
+# Using a comprehension
+numbers = range(1, 501)
+sum_comprehension = sum(num for num in numbers if num % 3 == 0 and num % 7 == 0)
+
+print("Sum using comprehension:", sum_comprehension)
+
+
+# Using a for loop
+sum_for_loop = 0
+
+for num in range(1, 501):
+    if num % 3 == 0 and num % 7 == 0:
+        sum_for_loop += num
+
+print("Sum using for loop:", sum_for_loop)
+
+from itertools import permutations
+
+# Sample data
+corpus = [["good", "product", "quality"], ["bad", "service", "experience"], ["excellent", "product", "recommend"]]
+tags = ["a", "b", "c"]
+dct_keys = {"a": "id_alpha", "b": "id_beta", "c": "id_gamma"}
+
+# Function to calculate similarity score
+def calculate_similarity(review1, review2):
+    intersection = len(set(review1) & set(review2))
+    union = len(set(review1) | set(review2))
+    score = intersection / union if union != 0 else 0
+    return {"id_alpha": dct_keys[tag1], "id_beta": dct_keys[tag2], "score": score}
+
+# Create permutations of tags
+tag_permutations = permutations(tags, 2)
+
+# Dictionary to store pairwise similarities
+pairwise_similarities = {}
+
+# Iterate over tag permutations
+for tag1, tag2 in tag_permutations:
+    review1 = corpus[tags.index(tag1)]
+    review2 = corpus[tags.index(tag2)]
+    
+    key = (tag1, tag2)
+    value = calculate_similarity(review1, review2)
+    
+    pairwise_similarities[key] = value
+
+# Print the result
+for key, value in pairwise_similarities.items():
+    print(f"{key}: {value}")
+
+
+from itertools import permutations
+
+# Sample data
+corpus = [["good", "product", "quality"], ["bad", "service", "experience"], ["excellent", "product", "recommend"]]
+tags = ["a", "b", "c"]
+dct_keys = {"a": "id_alpha", "b": "id_beta", "c": "id_gamma"}
+
+# Function to calculate similarity score
+def calculate_similarity(review1, review2):
+    intersection = len(set(review1) & set(review2))
+    union = len(set(review1) | set(review2))
+    score = intersection / union if union != 0 else 0
+    return {"id_alpha": dct_keys[tag1], "id_beta": dct_keys[tag2], "score": score}
+
+# Create permutations of tags
+tag_permutations = permutations(tags, 2)
+
+# Dictionary to store pairwise similarities
+pairwise_similarities = {}
+
+# Iterate over tag permutations
+for tag1, tag2 in tag_permutations:
+    # Find reviews corresponding to the tags using zip
+    for review1, review2 in zip(corpus[tags.index(tag1)], corpus[tags.index(tag2)]):
+        key = (tag1, tag2)
+        value = calculate_similarity(review1, review2)
+        pairwise_similarities[key] = value
+
+# Print the result
+for key, value in pairwise_similarities.items():
+    print(f"{key}: {value}")
