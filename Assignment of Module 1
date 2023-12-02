@@ -82,3 +82,8 @@ for tag1, tag2 in tag_permutations:
 # Print the result
 for key, value in pairwise_similarities.items():
     print(f"{key}: {value}")
+
+
+corpus = [["I", "did", "not", "like", "the", "services"], ["The", "service", "was", "ok"], ["I", "was", "ignored", "when", "I", "asked", "for", "services"]]
+tags = ["a", "b", "c"]
+dct_keys = {"a": 1, "b": "2", "c": 3}
